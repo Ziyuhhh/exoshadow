@@ -1,0 +1,36 @@
+# requirements.txt for:
+#   phot_var_twin_sine_QC_v12_mcmc.py
+#   v10_compare_runs_to_overleaf_mcmc.py
+#
+# NOTE (fixed): the previous version of this file pinned floors (numpy>=2.4,
+# pandas>=3.0, etc.) based on the Python 3.12 sandbox this pipeline was tested
+# in. numpy>=2.1 requires Python>=3.10, so that floor was unsatisfiable on an
+# older interpreter (e.g. Python 3.9) -- that's what caused the install error.
+# The floors below are relaxed to versions confirmed compatible with Python
+# 3.9+ on Windows (verified against real PyPI wheel metadata), so pip can
+# freely pick the newest version that's actually compatible with YOUR
+# interpreter, whatever it is.
+
+numpy>=1.23
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+astropy>=5.3
+emcee>=3.1
+corner>=2.2
+
+# ------------------------------------------------------------------
+# Confirmed-resolvable set for Python 3.9 on Windows (win_amd64), verified via
+# a real pip dependency solve (not just individual package checks):
+#   numpy==1.26.4
+#   pandas==2.3.x
+#   scipy==1.13.1
+#   matplotlib==3.9.4
+#   astropy==6.0.1
+#   emcee==3.1.6
+#   corner==2.3.0
+#
+# If you're on a newer Python (3.11/3.12), pip will automatically pick newer
+# versions instead (e.g. numpy 2.x) -- these floors don't force the old ones,
+# they just no longer BLOCK the old ones like the previous file did.
+# ------------------------------------------------------------------
