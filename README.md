@@ -13,4 +13,7 @@ End Date: 2025-12-18 04:58:12.576
 More notes here
 https://docs.google.com/document/d/1_lRhnbkIslBKsH2yWVX87nhmJ7kXZxt0h2kpur0BRoM/edit?usp=sharing
 
-clone the repo and just double click the batch file: run_photometry_with_prior_mcmc
+How to run:
+1. Clone the repo
+2. Make a venv and run ```pip install -r requirements.txt```
+3. Double click the batch file: run_photometry_with_prior_mcmc.bat
